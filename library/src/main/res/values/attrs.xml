@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <declare-styleable name="CountDownView"
+        >
+
+        <attr name="tv_bg" format="reference"/>
+
+        <attr name="tv_color" format="color"/>
+        <attr name="tv_size" format="dimension"/>
+        <attr name="tv_width" format="dimension"/>
+        <attr name="tv_height" format="dimension"/>
+        <attr name="isConvertDaysToHours" format="boolean"/>
+
+        <attr name="daysSuffix" format="string"/>
+
+        <attr name="hoursSuffix" format="string"/>
+
+        <attr name="minuteSuffix" format="string"/>
+
+        <attr name="secondsSuffix" format="string"/>
+
+        <attr name="millisecondsSuffix" format="string"/>
+
+    </declare-styleable>
+</resources>
