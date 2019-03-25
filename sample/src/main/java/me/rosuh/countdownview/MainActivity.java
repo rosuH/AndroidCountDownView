@@ -24,14 +24,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final CountDownView countDownView = findViewById(R.id.count_down);
-        countDownView.buildTimer(10000);
-        countDownView.start();
+        countDownView.buildTimer(10000).start();
         findViewById(R.id.button).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View v) {
                 countDownView.cancel();
-                countDownView.buildTimer(5462134);
-                countDownView.start();
+                countDownView.buildTimer(5462134).start();
             }
         });
     }

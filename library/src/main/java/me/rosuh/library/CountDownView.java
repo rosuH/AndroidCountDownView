@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-public class CountDownView extends LinearLayout {
+public class CountDownView extends LinearLayout{
 
     private TextView mDaysTv;
     private TextView mMinesTv;
@@ -109,19 +109,18 @@ public class CountDownView extends LinearLayout {
         textView.setLayoutParams(params);
     }
 
-    public void buildTimer(long millisInFuture) {
-        buildTimer(millisInFuture, defaultCountdownInterval);
+    public CountDownView buildTimer(long millisInFuture) {
+        return buildTimer(millisInFuture, defaultCountdownInterval);
     }
 
-    public void buildTimer(long millisInFuture, long countDownInterval) {
-        long mMillisInFuture = millisInFuture;
-        long mCountdownInterval = countDownInterval;
+    public CountDownView buildTimer(long millisInFuture, long countDownInterval) {
         if (this.countDownTimer == null){
-            countDownTimer = new InnerCountDownTimer(mMillisInFuture, mCountdownInterval);
+            countDownTimer = new InnerCountDownTimer(millisInFuture, countDownInterval);
         }else {
             countDownTimer.cancel();
-            countDownTimer = new InnerCountDownTimer(mMillisInFuture, mCountdownInterval);
+            countDownTimer = new InnerCountDownTimer(millisInFuture, countDownInterval);
         }
+        return this;
     }
 
     public void start(){
